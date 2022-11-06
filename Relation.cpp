@@ -62,7 +62,6 @@ Relation Relation::project(std::vector<int> colsToProject) {
         return Relation(name, emptyH);
     }
     for (unsigned int i = 0; i < colsToProject.size(); i++) {
-        int temp = colsToProject.at(i);
         nameCols.push_back(std::to_string(colsToProject.at(i)));
     }
     Header returnH(nameCols);
@@ -72,7 +71,7 @@ Relation Relation::project(std::vector<int> colsToProject) {
         Tuple newT;
         selectedRow = t.returnValues();
         for (unsigned int i = 0; i < colsToProject.size(); i++) {
-            for (unsigned int j = 0; j < selectedRow.size(); j++) {
+            for (int j = 0; j < selectedRow.size(); j++) {
                 if (colsToProject.at(i) == j) {
                     newT.addValue(selectedRow.at(j));
                 }

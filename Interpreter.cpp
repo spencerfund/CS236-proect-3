@@ -66,7 +66,6 @@ Relation Interpreter::evaluatePredicate(Predicate* p) {
         }
     }
     std::vector<int> colsToProject;
-    int testSize = usedVariables.size();
     for(unsigned int i = 0; i < names.size(); i++) {
         colsToProject.push_back(usedVariables[names.at(i)]);
     }

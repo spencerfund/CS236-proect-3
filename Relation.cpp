@@ -72,7 +72,7 @@ Relation Relation::project(std::vector<int> colsToProject) {
         selectedRow = t.returnValues();
         for (unsigned int i = 0; i < colsToProject.size(); i++) {
             for (unsigned j = 0; j < selectedRow.size(); j++) {
-                if (colsToProject.at(i) == static_cast<int>(j) {
+                if (colsToProject.at(i) == static_cast<int>(j)) {
                     newT.addValue(selectedRow.at(j));
                 }
             }

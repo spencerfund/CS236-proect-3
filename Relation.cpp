@@ -71,7 +71,7 @@ Relation Relation::project(std::vector<int> colsToProject) {
         Tuple newT;
         selectedRow = t.returnValues();
         for (unsigned int i = 0; i < colsToProject.size(); i++) {
-            for (int j = 0; j < selectedRow.size(); j++) {
+            for (unsigned j = 0; j < selectedRow.size(); j++) {
                 if (colsToProject.at(i) == j) {
                     newT.addValue(selectedRow.at(j));
                 }

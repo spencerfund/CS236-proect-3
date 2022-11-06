@@ -2,7 +2,7 @@
 #define DATABASE_H
 #include <string>
 #include <map>
-#include "relation.h"
+#include "Relation.h"
 
 class Database {
 private:
